@@ -7,9 +7,9 @@ from .Media import Media
 class Config:
     class Settings:
         class CaseStudy:
-            Fov = 'Fov1'
             Kt = 'Kt1'
-            Sigma = 'Sigma1'
+            Rps = 'Rps1'
+            # Fov = 'Fov1'
         class Acquisition:
             pass
     class Packages:
@@ -29,6 +29,6 @@ class Config:
             @staticmethod
             def CaseStudyRoot():
                 cs = Config.Settings.CaseStudy
-                return os.path.join(cs.Prop, cs.Pov, cs.Kt, cs.Sigma)
+                return os.path.join(cs.Kt,  cs.Rps)
     class General:
         Version = 0

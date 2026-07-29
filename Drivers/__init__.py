@@ -2,6 +2,7 @@
 from termcolor import colored
 #%% Importing Code Phases
 from Drivers import Phase0
+from Drivers import Phase1
 #%% Defining Main Function
 def main(Config):
     print('----------------------------------')
@@ -10,6 +11,8 @@ def main(Config):
         print('. Drivers:', colored( 'Running ℹ️ ', 'cyan'))
         print('----------------------------------')
         Phase0.main(Config)
+        print('----------------------------------')
+        Phase1.main(Config)
         print('----------------------------------')
         print('. Drivers:', colored( 'Exexuted ✅', 'green'))
     elif Config.Packages.Drivers.General.Activation is False:
